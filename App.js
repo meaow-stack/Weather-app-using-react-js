@@ -26,6 +26,9 @@ const handleClick = async (e, city, setWeather, setError) => {
         console.log(error);
         setError('City not found or API error. Please try again and enter the city to start');
         setWeather(null);
+        finally {
+        setLoading(false);
+    }
     }
 };
 
